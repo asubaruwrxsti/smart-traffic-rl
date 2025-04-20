@@ -3,3 +3,4 @@ gym
 sumo
 traci
 numpy
+torch

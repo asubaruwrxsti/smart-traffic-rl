@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-04-20 19:27:23 by Eclipse SUMO netconvert Version v1_22_0+1609-d3d000a8f75
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="nodes.nod.xml"/>
+        <edge-files value="edges.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="sumo_config/network.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,100.00,50.00" origBoundary="0.00,0.00,100.00,50.00" projParameter="!"/>
+
+    <edge id=":center_0" function="internal">
+        <lane id=":center_0_0" index="0" speed="3.90" length="2.58" shape="48.87,46.61 49.43,47.03 50.00,47.17 50.57,47.03 51.13,46.61"/>
+    </edge>
+
+    <edge id="1" from="a" to="center" priority="-1">
+        <lane id="1_0" index="0" speed="13.89" length="67.51" shape="1.13,-1.13 48.87,46.61"/>
+    </edge>
+    <edge id="2" from="center" to="b" priority="-1">
+        <lane id="2_0" index="0" speed="13.89" length="67.51" shape="51.13,46.61 98.87,-1.13"/>
+    </edge>
+
+    <tlLogic id="center" type="static" programID="0" offset="0">
+        <phase duration="82" state="G"/>
+        <phase duration="3"  state="y"/>
+        <phase duration="5"  state="r"/>
+    </tlLogic>
+
+    <junction id="a" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="-0.00,-0.00 2.26,-2.26"/>
+    <junction id="b" type="dead_end" x="100.00" y="0.00" incLanes="2_0" intLanes="" shape="97.74,-2.26 100.00,-0.00"/>
+    <junction id="center" type="traffic_light" x="50.00" y="50.00" incLanes="1_0" intLanes=":center_0_0" shape="52.26,47.74 50.00,45.47 47.74,47.74 49.25,48.74 50.00,48.87 50.75,48.74 51.51,48.37">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="1" to="2" fromLane="0" toLane="0" via=":center_0_0" tl="center" linkIndex="0" dir="r" state="O"/>
+
+    <connection from=":center_0" to="2" fromLane="0" toLane="0" dir="r" state="M"/>
+
+</net>

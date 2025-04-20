@@ -2,10 +2,9 @@
     <input>
         <net-file value="network.net.xml"/>
         <route-files value="routes.rou.xml"/>
-        <additional-files value="traffic_lights.add.xml"/>
     </input>
     <time>
         <begin value="0"/>
-        <end value="100"/>
+        <end value="10"/>
     </time>
 </configuration>

@@ -1,7 +1,7 @@
 import ray
 from ray import tune
-from ray.rllib.agents.ppo import PPOTrainer
-from env.traffic_env import TrafficEnv
+from ray.rllib.algorithms.ppo import PPO
+from model.traffic_env import TrafficEnv
 from ray.tune.registry import register_env
 
 def env_creator(env_config):
