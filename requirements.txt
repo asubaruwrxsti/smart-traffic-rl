@@ -1,5 +1,5 @@
 ray[rllib]
 gym
-sumo-tools
+sumo
 traci
 numpy
